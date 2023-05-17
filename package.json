@@ -1,0 +1,13 @@
+{
+  "name": "vuesj2-learning",
+  "version": "1.0.0",
+  "author": "joaqu1m",
+  "scripts": {
+    "serve": "vue-cli-service serve --port 3000"
+  },
+  "dependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "vue": "^2.7.14",
+    "vue-router": "^3.5.3"
+  }
+}
