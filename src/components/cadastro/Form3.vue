@@ -1,12 +1,12 @@
 <template>
     <div>
-        segunda parte do formulário
+        Você finalizou esse formulário
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Form2'
+        name: 'Form3'
     }
 </script>
 

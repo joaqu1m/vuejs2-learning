@@ -1,16 +1,13 @@
 <template>
-    <div>
-        <div>
-            Alterador de componentes em formulário
-        </div>
-        <button id="button2" @click="exibirForm2 = !exibirForm2">
-            alterar componente
-        </button>
-        <button id="button3" @click="propsParaForm1.trueOuFalse = !propsParaForm1.trueOuFalse">
-            alterar prop de componente
-        </button>
-        <div id="componente">
-            <component v-bind="propsParaForm1" :is="exibirForm2 ? 'Form2' : 'Form1'"></component>
+    <div class="corpo">
+        <div class="card-cadastro">
+            <div class="card-cadastro-titulo">
+                Cadastro
+            </div>
+            <component :is="`Form${formAtual}`"></component>
+            <button @click="formAtual++" class="card-cadastro-botao">
+                Próxima fase
+            </button>
         </div>
     </div>
 </template>
@@ -18,24 +15,56 @@
 <script>
     import Form1 from '../components/cadastro/Form1.vue'
     import Form2 from '../components/cadastro/Form2.vue'
+    import Form3 from '../components/cadastro/Form3.vue'
 
     export default {
-        data() {
-            return {
-                exibirForm2: false,
-                propsParaForm1: {
-                    mensagem: 'Olá, mundo!',
-                    outraProp: 42,
-                    trueOuFalse: false
-                }
-            }
-        },
         name: 'Cadastro',
         components: {
             Form1,
-            Form2
+            Form2,
+            Form3
+        },
+        data() {
+            return {
+                formAtual: 1
+            }
         }
     }
 </script>
 
-<style scoped></style>
+<style scoped>
+    .corpo {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(247, 247, 247);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-cadastro {
+        width: 450px;
+        height: 500px;
+        border: 1px rgb(177, 177, 177) solid;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card-cadastro-titulo {
+        font-size: 25px;
+    }
+
+    .card-cadastro-botao {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(230, 166, 250);
+        border: 0;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>

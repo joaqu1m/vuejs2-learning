@@ -11,12 +11,15 @@
         components: {
             Home,
             Cadastro
-        },
+        }
     }
 </script>
 
 <style>
+    body {
+        margin: 0;
+    }
     * {
-        margin: 0 !important;
+        font-family: "Trebuchet MS";
     }
 </style>
