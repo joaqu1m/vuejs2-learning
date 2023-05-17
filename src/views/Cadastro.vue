@@ -4,7 +4,10 @@
             Alterador de componentes em formulário
         </div>
         <button id="button2" @click="exibirForm2 = !exibirForm2">
-            botão 2
+            alterar componente
+        </button>
+        <button id="button3" @click="propsParaForm1.trueOuFalse = !propsParaForm1.trueOuFalse">
+            alterar prop de componente
         </button>
         <div id="componente">
             <component v-bind="propsParaForm1" :is="exibirForm2 ? 'Form2' : 'Form1'"></component>
@@ -22,7 +25,8 @@
                 exibirForm2: false,
                 propsParaForm1: {
                     mensagem: 'Olá, mundo!',
-                    outraProp: 42
+                    outraProp: 42,
+                    trueOuFalse: false
                 }
             }
         },
