@@ -5,12 +5,14 @@
 <script>
     import Home from './views/Home.vue';
     import Cadastro from './views/Cadastro.vue';
+    import Lojinha from './views/Lojinha.vue';
 
     export default {
         name: 'App',
         components: {
             Home,
-            Cadastro
+            Cadastro,
+            Lojinha
         }
     }
 </script>

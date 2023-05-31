@@ -3,24 +3,25 @@
         <button class="home_container" @click="redirecionar()">
             Ir para cadastro
         </button>
-        <br>
-        ComponenteTeste:
-        <br>
-        <ComponenteTeste v-bind="propsComponenteTeste"></ComponenteTeste>
+        <br>ComponenteTeste:
+        <TesteProps v-bind="propsTesteProps"></TesteProps>
+        <TesteVuex />
     </div>
 </template>
 
 <script>
-    import ComponenteTeste from '../components/home/ComponenteTeste.vue'
+    import TesteProps from '../components/home/TesteProps.vue'
+    import TesteVuex from '../components/home/TesteVuex.vue';
 
     export default {
         name: "Home",
         components: {
-            ComponenteTeste
+            TesteProps,
+            TesteVuex
         },
         data() {
             return {
-                propsComponenteTeste: {
+                propsTesteProps: {
                     mensagem: 'Mensagem do componente teste',
                     outraProp: 'Outra propriedade do componente teste'
                 }
@@ -29,6 +30,9 @@
         methods: {
             redirecionar() {
                 window.location.href = './cadastro'
+            },
+            redirecionar2() {
+                this.$router.push({ name: "Home" })
             }
         }
     };

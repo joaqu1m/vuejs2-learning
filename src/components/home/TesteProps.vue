@@ -1,6 +1,6 @@
 <template>
     <div class="componenteTeste_container">
-        Props recebidas:
+        Props recebidas:<br>
         {{ mensagem }}
         {{ outraProp }}
     </div>
@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: 'ComponenteTeste',
+        name: 'TesteProps',
         props: ['mensagem', 'outraProp']
     }
 </script>

@@ -4,7 +4,7 @@
             <div class="card-cadastro-titulo">
                 Cadastro
             </div>
-            <component :is="`Form${formAtual}`"></component>
+            <component class="card-cadastro-form" :is="`Form${formAtual}`"></component>
             <button @click="formAtual++" class="card-cadastro-botao">
                 Próxima fase
             </button>
@@ -49,7 +49,7 @@
         border-radius: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
@@ -66,5 +66,13 @@
         color: white;
         font-size: 20px;
         cursor: pointer;
+    }
+
+    .card-cadastro-form {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 </style>
