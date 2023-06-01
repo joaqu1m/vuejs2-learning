@@ -6,13 +6,15 @@
     import Home from './views/Home.vue';
     import Cadastro from './views/Cadastro.vue';
     import Lojinha from './views/Lojinha.vue';
+    import TesteMaps from './components/vuex-maps/TesteMaps.vue';
 
     export default {
-        name: 'App',
+        name: "App",
         components: {
             Home,
             Cadastro,
-            Lojinha
+            Lojinha,
+            TesteMaps
         }
     }
 </script>

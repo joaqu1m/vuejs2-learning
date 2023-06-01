@@ -28,7 +28,7 @@
                 this.$store.commit('decrement')
             },
             incrementAsync() {
-                this.$store.dispatch('incrementAsync')
+                this.$store.dispatch('incrementAsync', 1)
             }
         },
         computed: {

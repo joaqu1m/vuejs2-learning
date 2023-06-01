@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: 'Form1',
+        name: "Form1",
         props: []
     }
 </script>

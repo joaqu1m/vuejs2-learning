@@ -8,8 +8,8 @@
 
 <script>
     export default {
-        name: 'TesteProps',
-        props: ['mensagem', 'outraProp']
+        name: "TesteProps",
+        props: ["mensagem", "outraProp"]
     }
 </script>
 

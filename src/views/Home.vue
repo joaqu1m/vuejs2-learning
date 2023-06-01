@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="home_container" @click="redirecionar()">
+        <button class="home_container" @click="redirecionar2()">
             Ir para cadastro
         </button>
         <br>ComponenteTeste:
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-    import TesteProps from '../components/home/TesteProps.vue'
-    import TesteVuex from '../components/home/TesteVuex.vue';
+    import TesteProps from '../components/props/TesteProps.vue'
+    import TesteVuex from '../components/vuex/TesteVuex.vue';
 
     export default {
         name: "Home",
@@ -32,7 +32,7 @@
                 window.location.href = './cadastro'
             },
             redirecionar2() {
-                this.$router.push({ name: "Home" })
+                this.$router.push("./cadastro")
             }
         }
     };

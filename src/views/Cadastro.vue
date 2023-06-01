@@ -18,7 +18,7 @@
     import Form3 from '../components/cadastro/Form3.vue'
 
     export default {
-        name: 'Cadastro',
+        name: "Cadastro",
         components: {
             Form1,
             Form2,

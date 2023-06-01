@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import Entrando1 from './TesteVuex/Entrando1.vue'
+    import Entrando1 from './Entrando1.vue'
 
     export default {
         name: "TesteVuex",
@@ -23,13 +23,13 @@
         },
         methods: {
             increment() {
-                this.$store.commit('increment', 1)
+                this.$store.dispatch("increment", 1)
             },
             decrement() {
-                this.$store.commit('decrement')
+                this.$store.dispatch("decrement")
             },
             incrementAsync() {
-                this.$store.dispatch('incrementAsync')
+                this.$store.dispatch("incrementAsync", 1)
             }
         },
         computed: {

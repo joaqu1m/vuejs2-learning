@@ -17,18 +17,21 @@ const store = new Vuex.Store({
     },
     actions: {
         increment(context, data) {
-            context.commit('increment', data)
+            context.commit("increment", data)
         },
         decrement(context) {
-            context.commit('decrement')
+            context.commit("decrement")
         },
-        incrementAsync(context) {
+        incrementAsync(context, data) {
             setTimeout(() => {
-                context.commit('increment')
+                context.commit("increment", data)
             }, 1000)
         }
     },
     getters: {
+        normalCount(state) {
+            return state.count
+        },
         doubleCount(state) {
             return state.count * 2
         },
