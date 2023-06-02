@@ -16,11 +16,11 @@ const router = new VueRouter({
             name: "Home",
             component: Home,
             alias: ["/home"],
-            children: [
-                {
-                    path: ""
-                }
-            ]
+            // children: [
+            //     {
+            //         path: "/contato"
+            //     }
+            // ]
         },
         {
             path: "/cadastro",

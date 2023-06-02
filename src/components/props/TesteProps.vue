@@ -7,14 +7,14 @@
 </template>
 
 <script>
-    export default {
-        name: "TesteProps",
-        props: ["mensagem", "outraProp"]
-    }
+export default {
+    name: "TesteProps",
+    props: ["mensagem", "outraProp"]
+}
 </script>
 
 <style scoped>
-    .componenteTeste_container {
-        background-color: aqua;
-    }
+.componenteTeste_container {
+    background-color: aqua;
+}
 </style>

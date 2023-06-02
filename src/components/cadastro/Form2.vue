@@ -5,10 +5,10 @@
 </template>
 
 <script>
-    export default {
-        name: "Form2",
-        props: []
-    }
+export default {
+    name: "Form2",
+    props: []
+}
 </script>
 
 <style scoped></style>

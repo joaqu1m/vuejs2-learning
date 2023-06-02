@@ -36,7 +36,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations("increment", "decrement"),
+        ...mapMutations(["increment", "decrement"]),
         ...mapActions(['increment', 'decrement', 'incrementAsync']),
         retornar() {
 

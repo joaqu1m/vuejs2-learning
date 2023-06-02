@@ -10,38 +10,38 @@
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
-    export default {
-        name: "Entrando2",
-        props: [],
-        components: {},
-        data() {
-            return {}
+export default {
+    name: "Entrando2",
+    props: [],
+    components: {},
+    data() {
+        return {}
+    },
+    methods: {
+        ...mapActions(['increment']),
+        teste() {
+            this.increment(10)
         },
-        methods: {
-            ...mapActions(['increment']),
-            teste() {
-                this.increment(10)
-            },
-            decrement() {
-                this.$store.commit('decrement')
-            },
-            incrementAsync() {
-                this.$store.dispatch('incrementAsync', 1)
-            }
+        decrement() {
+            this.$store.commit('decrement')
         },
-        computed: {
-            ...mapGetters(["tripleCount"]),
-            count() {
-                return this.$store.state.count
-            },
-            doubleCount() {
-                return this.$store.getters.doubleCount
-            }
+        incrementAsync() {
+            this.$store.dispatch('incrementAsync', 1)
+        }
+    },
+    computed: {
+        ...mapGetters(["tripleCount"]),
+        count() {
+            return this.$store.state.count
         },
-        watch: {}
-    }
+        doubleCount() {
+            return this.$store.getters.doubleCount
+        }
+    },
+    watch: {}
+}
 </script>
 
 <style scoped></style>

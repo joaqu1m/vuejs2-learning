@@ -7,17 +7,17 @@
 </template>
 
 <script>
-    export default {
-        name: "Form1",
-        props: []
-    }
+export default {
+    name: "Form1",
+    props: []
+}
 </script>
 
 <style scoped>
-    .fase-form-input {
-        width: 200px;
-        height: 30px;
-        border-radius: 10px;
-        border: 1px rgb(177, 177, 177) solid;
-    }
+.fase-form-input {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px rgb(177, 177, 177) solid;
+}
 </style>
