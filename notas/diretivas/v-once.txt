@@ -1,0 +1,5 @@
+v-once é uma diretiva que remove a reatividade de um elemento após sua primeira renderização.
+
+<p v-once>Este não irá mudar: {{ msg }}</p>
+
+<p>Este irá mudar: {{ msg }}</p>

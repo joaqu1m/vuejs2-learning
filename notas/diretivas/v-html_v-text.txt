@@ -1,0 +1,23 @@
+v-html é uma propriedade diretiva que permite que você crie elementos da DOM diretamente pelo innerHTML.
+
+essa é uma propriedade para ser usada em dom elements sem conteúdo, pois o conteúdo será sobrescrevido
+pela variável especificada no v-html. por exemplo:
+
+<p> {{ conteudo }} </p> // conteudo será exibido, mas como se fosse um texto
+<p v-html="conteudo"> </p> // conteudo será sobrescrito pelo conteudo da variável conteudo com a
+possibilidade de criação de conteúdo na dom.
+
+por exemplo:
+vamos supor que a variável "conteudo" tenha o valor de "<a>link</a>"
+
+no exemplo de cima, o conteúdo será exibido como texto
+no exemplo de baixo, será exibido o texto "Link" envolto de uma tag <a>
+
+no caso do v-text, é uma diretiva que permite que você insira texto no innerHTML de um elemento da DOM
+ele também deve ser usado em elementos sem conteúdo, pois serão sobrescritos pelo conteúdo da variável
+por exemplo:
+
+<p> {{ conteudo }} </p>
+<p v-text="conteudo"> </p>
+
+essas duas maneiras serão exibidas do exato mesmo jeito ao usuário

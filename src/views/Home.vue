@@ -4,23 +4,17 @@
             Ir para cadastro
         </button>
         <br>ComponenteTeste:
-        <TesteProps v-bind="propsTesteProps"></TesteProps>
-        <TesteVuex />
-        <HooksTest />
+        <TesteProps v-bind="propsTesteProps" />
     </div>
 </template>
 
 <script>
 import TesteProps from '../components/props/TesteProps.vue'
-import TesteVuex from '../components/vuex/TesteVuex.vue';
-import HooksTest from '../components/lifeCycleHooks/HooksTest.vue';
 
 export default {
     name: "Home",
     components: {
-        TesteProps,
-        TesteVuex,
-        HooksTest
+        TesteProps
     },
     data() {
         return {

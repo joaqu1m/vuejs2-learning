@@ -1,0 +1,9 @@
+a tag template tem dois usos principais
+
+é usada como uma tag para escrever html em arquivos .vue quando usando a CLI,
+usando a base padrão de arquivos vue
+
+também pode ser usada como se fosse uma tag normal, e funciona como se fosse um diamond do react.
+ou seja, o que estiver dentro da tag template, será renderizado dentro da tag pai.
+diferente do diamond do react, o template pode conter a propriedade v-if (e derivadas), que foi explicada em
+notas/diretivas/v-if_&_v-show.txt

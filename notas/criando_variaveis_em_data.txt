@@ -1,0 +1,36 @@
+as variaveis que voce define em data, como no exemplo abaixo:
+
+    data() {
+        return {
+            formAtual: 1
+        }
+    }
+
+    quando usando a CLI.
+    quando usando o vue sem a CLI, você pode definir as variáveis diretamente no objeto data, como no exemplo abaixo:
+
+    data: {
+        formAtual: 1
+    }
+
+    mas aqui os exemplos são com a CLI
+
+podem ser acessadas por proxy, ou seja, diretamente por:
+
+    this.formAtual
+
+sem a necessidade de acessar por:
+
+    this.$data.formAtual
+
+mas há uma exceção, que é quando você define essa variável começada por $ ou por _
+isso ocorre pois as variáveis padrões da instância vue são começadas sempre com hífen ou underline,
+então se você usa esses caracteres pode ocorrer conflito de nomenclatura, com os atributos do vue.
+caso você seja teimoso e queira usar mesmo assim, você pode acessar essas variáveis por:
+
+    this.$data.$formAtual
+
+    ou
+
+    this.$data._formAtual
+

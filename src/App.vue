@@ -7,6 +7,7 @@ import Home from './views/Home.vue';
 import Cadastro from './views/Cadastro.vue';
 import Lojinha from './views/Lojinha.vue';
 import TesteMaps from './components/vuex-maps/TesteMaps.vue';
+import Testes from './views/Testes.vue';
 
 export default {
     name: "App",
@@ -14,7 +15,8 @@ export default {
         Home,
         Cadastro,
         Lojinha,
-        TesteMaps
+        TesteMaps,
+        Testes
     }
 }
 </script>

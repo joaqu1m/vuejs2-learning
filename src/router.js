@@ -5,6 +5,7 @@ import Home from './views/Home.vue';
 import Cadastro from './views/Cadastro.vue';
 import Lojinha from './views/Lojinha.vue';
 import TesteMaps from './components/vuex-maps/TesteMaps.vue';
+import Testes from './views/Testes.vue';
 
 Vue.use(VueRouter);
 
@@ -31,6 +32,11 @@ const router = new VueRouter({
             path: "/maps",
             name: "TesteMaps",
             component: TesteMaps
+        },
+        {
+            path: "/testes",
+            name: "Testes",
+            component: Testes
         },
         {
             path: "/loja",

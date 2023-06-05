@@ -1,0 +1,67 @@
+::em vez de usar:
+onclick
+onmouseover
+onmouseout
+::no vue, use:
+v-on:click
+v-on:mouseover
+v-on:mouseout
+::ou use pelo atalho:
+@click
+@mouseover
+@mouseout
+
+:::esse valor (v-on:click="" || @click="valor") deve ser definido como:
+Função || Expressão || Objeto
+
+:::e o v-on tem "modificadores", que podem ser usados como:
+@click.prevent
+
+::esses modificadores servem para encurtar seu código, sendo eles:
+
+@click.prevent=""
+a mesma coisa que usar a expressão:
+"e.preventDefault()" no método executado pelo click
+
+@click.once=""
+a mesma coisa que remover o @click após o primeiro click, ou seja, invalidar o evento
+
+e outros que eu não cheguei a testar, mas aqui estão suas explicações:
+
+@click.self=""
+a mesma coisa que usar o evento apenas no elemento clicado, e não nos filhos dele
+
+@click.stop=""
+a mesma coisa que usar o "e.stopPropagation()" no método executado pelo click
+
+@click.capture=""
+a mesma coisa que usar o "e.stopPropagation()" no método executado pelo click, mas apenas no evento "capturado" pelo elemento pai, e não nos filhos
+
+@click.passive=""
+a mesma coisa que usar o "e.preventDefault()" no método executado pelo click, mas sem bloquear o scroll
+
+@click.native=""
+a mesma coisa que usar o evento "click" do javascript, e não o do vue
+
+@click.left=""
+a mesma coisa que usar o evento "click" apenas com o botão esquerdo do mouse
+
+@click.right=""
+a mesma coisa que usar o evento "click" apenas com o botão direito do mouse
+
+@click.middle=""
+a mesma coisa que usar o evento "click" apenas com o botão do meio do mouse
+
+@click.{keyCode || keyAlias}=""
+a mesma coisa que usar o evento "click" apenas com a tecla especificada, sendo que o keyCode pode ser usado apenas com o número da tecla, e o keyAlias pode ser usado com o nome da tecla, como:
+@click.13=""
+@click.enter=""
+@click.esc=""
+@click.space=""
+
+:::e esses modificadores podem ser concatenados para que vários possam ser usados em apenas um eventListener, como:
+@click.prevent.self=""
+@click.prevent.once=""
+@click.prevent.self.once=""
+
+// https://v2.vuejs.org/v2/api/#v-on

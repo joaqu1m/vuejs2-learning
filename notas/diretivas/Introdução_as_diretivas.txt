@@ -1,0 +1,53 @@
+diretivas de vue são propriedades para serem usadas em tags html, geralmente todas começando com v-
+elas são, em ordem de mais usadas:
+
+v-bind
+faz o bind de uma propriedade do vue com uma propriedade do html.
+por exemplo, v-bind:src="imagem" faz com que o atributo src seja igual à variável "imagem"
+o v-bind pode ser abreviado como :src="imagem"
+também pode ser usado como props, mas isso eu ainda não entendi tão bem.
+
+v-if
+faz com que o elemento só seja renderizado se a condição for verdadeira
+
+v-else
+faz com que o elemento só seja renderizado se a condição for falsa
+
+v-else-if
+faz com que o elemento só seja renderizado se a condição for falsa e a condição anterior for verdadeira
+
+v-for
+faz com que o elemento seja renderizado para cada elemento de uma lista, por exemplo, v-for="item in lista" faz com que o elemento seja renderizado para cada item da lista
+
+v-on
+faz o bind de um evento do html com uma função do vue, por exemplo
+v-on:click="funcao" faz com que uma função seja atribuída à um evento javascript, assim como o onclick="funcao"
+pode ser abreviado como @click="funcao"
+veja mais sobre o uso e seus modificadores em notas/diretivas/v-on.txt
+
+v-model
+faz o bind de uma propriedade do vue com uma propriedade do html, por exemplo, v-model="nome" faz com que o nome do html seja o nome do vue
+
+v-text
+faz com que o texto do elemento seja o texto do vue
+
+v-html
+faz com que o html do elemento seja o html do vue
+
+v-show
+faz com que o elemento seja mostrado ou escondido dependendo da condição
+
+v-cloak
+faz com que o elemento não seja mostrado até que o vue seja carregado
+
+v-pre
+faz com que o elemento não seja compilado pelo vue
+
+v-once
+faz com que o elemento seja renderizado apenas uma vez
+
+v-slot
+faz com que o elemento seja renderizado como um slot
+
+v-is
+faz com que o elemento seja renderizado como um componente

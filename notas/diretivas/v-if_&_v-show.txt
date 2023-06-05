@@ -1,0 +1,32 @@
+v-if, v-else-if e v-else
+
+são propriedades de elementos da dom que definem se esse elemento vai ser renderizado na dom ou não.
+eles devem ser utilizados concatenadamente, por exemplo:
+
+<div v-if="condicao1">
+    <p>Condição 1</p>
+</div>
+<div v-else-if="condicao2">
+    <p>Condição 2</p>
+</div>
+<div v-else>
+    <p>Condição 3</p>
+</div>
+
+essas condições também podem ser utilizadas em uma tag template para que não seja necessário
+criar uma div para cada condição, por exemplo:
+
+<template v-if="condicao1">
+    <p>Condição 1</p>
+</template>
+<template v-else-if="condicao2">
+    <p>Condição 2</p>
+</template>
+<template v-else>
+    <p>Condição 3</p>
+</template>
+
+uma propriedade parecida com o v-if é o v-show, que, ao em vez de renderizar o componente baseado
+em uma condição, sempre renderiza o componente, mas o deixa invisível (display none) caso a condição seja falsa.
+
+ou seja, não se pode utilizar a tag template nesse caso, pois o componente será sempre renderizado.
