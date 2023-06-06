@@ -1,6 +1,5 @@
 <template>
     <div>
-        bem vindo à pagina de testes
         <component v-show="mostrandoFrame" class="frame" :is="conteudoFrame"></component>
         <div class="caixona">
             <button @click="mostrarFrame">TesteVuex</button>
@@ -10,6 +9,12 @@
             <button @click="mostrarFrame">TesteForRef</button>
             <button @click="mostrarFrame">TesteRef</button>
             <button @click="mostrarFrame">TesteForMatriz</button>
+            <button @click="mostrarFrame">TesteForJson</button>
+            <button @click="mostrarFrame">TesteForKey</button>
+            <button @click="mostrarFrame">TesteReplaceFor</button>
+            <button @click="mostrarFrame">TesteComputed</button>
+            <button @click="mostrarFrame">TesteWatch</button>
+            <button @click="mostrarFrame">TesteStyles</button>
         </div>
     </div>
 </template>
@@ -22,6 +27,12 @@ import TesteFor from '../components/looping_ref/TesteFor.vue'
 import TesteForRef from '../components/looping_ref/TesteForRef.vue'
 import TesteRef from '../components/looping_ref/TesteRef.vue'
 import TesteForMatriz from '../components/looping_ref/TesteForMatriz.vue'
+import TesteForJson from '../components/looping_ref/TesteForJson.vue'
+import TesteForKey from '../components/looping_ref/TesteForKey.vue';
+import TesteReplaceFor from '../components/looping_ref/TesteReplaceFor.vue';
+import TesteComputed from '../components/option_obj/TesteComputed.vue';
+import TesteWatch from '../components/option_obj/TesteWatch.vue';
+import TesteStyles from '../components/estilizacoes/TesteStyles.vue';
 
 export default {
     name: "Testes",
@@ -33,7 +44,13 @@ export default {
         TesteFor,
         TesteForRef,
         TesteRef,
-        TesteForMatriz
+        TesteForMatriz,
+        TesteForJson,
+        TesteForKey,
+        TesteReplaceFor,
+        TesteComputed,
+        TesteWatch,
+        TesteStyles
     },
     data() {
         return {

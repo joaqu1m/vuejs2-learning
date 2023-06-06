@@ -41,7 +41,6 @@ export default {
 
 <style scoped>
 .main {
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
