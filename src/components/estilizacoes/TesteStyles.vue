@@ -48,12 +48,6 @@ export default {
 </script>
 
 <style scoped>
-    .verde {
-        color: green;
-    }
-    vermelho {
-        color: red;
-    }
     .azul {
         color: blue;
     }

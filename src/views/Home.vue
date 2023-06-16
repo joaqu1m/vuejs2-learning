@@ -3,18 +3,22 @@
         <button class="home_container" @click="redirecionar2()">
             Ir para cadastro
         </button>
+        router-view
         <br>ComponenteTeste:
         <TesteProps v-bind="propsTesteProps" />
+        <PropsEspecificadas :mensagem="propsTesteProps.mensagem" :outraProp="propsTesteProps.outraProp" />
     </div>
 </template>
 
 <script>
 import TesteProps from '../components/props/TesteProps.vue'
+import PropsEspecificadas from '../components/props/PropsEspecificadas.vue'
 
 export default {
     name: "Home",
     components: {
-        TesteProps
+        TesteProps,
+        PropsEspecificadas
     },
     data() {
         return {
