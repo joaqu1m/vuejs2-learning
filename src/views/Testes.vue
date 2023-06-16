@@ -1,20 +1,16 @@
 <template>
     <div>
-        <component v-show="mostrandoFrame" class="frame" :is="conteudoFrame"></component>
+        <component v-if="conteudoFrame" class="frame" :is="conteudoFrame"></component>
+        <div v-else style="margin: 10px;">
+            <router-link to="/">
+                <button>Retornar à home</button>
+            </router-link>
+            <h2>Página de testes gerais</h2>
+        </div>
         <div class="caixona">
-            <button @click="mostrarFrame">TesteVuex</button>
-            <button @click="mostrarFrame">HooksTest</button>
-            <button @click="mostrarFrame">TesteV_IF</button>
-            <button @click="mostrarFrame">TesteFor</button>
-            <button @click="mostrarFrame">TesteForRef</button>
-            <button @click="mostrarFrame">TesteRef</button>
-            <button @click="mostrarFrame">TesteForMatriz</button>
-            <button @click="mostrarFrame">TesteForJson</button>
-            <button @click="mostrarFrame">TesteForKey</button>
-            <button @click="mostrarFrame">TesteReplaceFor</button>
-            <button @click="mostrarFrame">TesteComputed</button>
-            <button @click="mostrarFrame">TesteWatch</button>
-            <button @click="mostrarFrame">TesteStyles</button>
+            <button v-for="(frame, i) in frames" :key="i" @click="mostrarFrame" :class="{ botaoEspecial: frame.especial }">
+                {{ frame.inn }}
+            </button>
         </div>
     </div>
 </template>
@@ -33,6 +29,10 @@ import TesteReplaceFor from '../components/looping_ref/TesteReplaceFor.vue';
 import TesteComputed from '../components/option_obj/TesteComputed.vue';
 import TesteWatch from '../components/option_obj/TesteWatch.vue';
 import TesteStyles from '../components/estilizacoes/TesteStyles.vue';
+import Testevmodel from '../components/twowaydatabind/Testevmodel.vue';
+import TesteVModelModifiers from '../components/twowaydatabind/TesteVModelModifiers.vue';
+import TesteVOnGlobal from '../components/lifeCycleHooks/TesteVOnGlobal.vue';
+import TesteCalculos from '../components/lifeCycleHooks/TesteCalculos.vue';
 
 export default {
     name: "Testes",
@@ -50,18 +50,73 @@ export default {
         TesteReplaceFor,
         TesteComputed,
         TesteWatch,
-        TesteStyles
+        TesteStyles,
+        Testevmodel,
+        TesteVModelModifiers,
+        TesteVOnGlobal,
+        TesteCalculos
     },
     data() {
         return {
-            mostrandoFrame: false,
+            frames: [{
+                inn: "TesteVuex",
+                especial: false
+            }, {
+                inn: "HooksTest",
+                especial: false
+            }, {
+                inn: "TesteV_IF",
+                especial: false
+            }, {
+                inn: "TesteFor",
+                especial: false
+            }, {
+                inn: "TesteForRef",
+                especial: false
+            }, {
+                inn: "TesteRef",
+                especial: false
+            }, {
+                inn: "TesteForMatriz",
+                especial: true
+            }, {
+                inn: "TesteForJson",
+                especial: false
+            }, {
+                inn: "TesteForKey",
+                especial: false
+            }, {
+                inn: "TesteReplaceFor",
+                especial: false
+            }, {
+                inn: "TesteComputed",
+                especial: true
+            }, {
+                inn: "TesteWatch",
+                especial: false
+            }, {
+                inn: "TesteStyles",
+                especial: false
+            }, {
+                inn: "Testevmodel",
+                especial: true
+            }, {
+                inn: "TesteVModelModifiers",
+                especial: false
+            }, {
+                inn: "TesteVOnGlobal",
+                especial: false
+            }, {
+                inn: "TesteCalculos",
+                especial: true
+            }],
             conteudoFrame: null
         }
     },
     methods: {
         mostrarFrame(e) {
-            this.conteudoFrame = e.target.innerText
-            this.mostrandoFrame = true
+            const fS = e.target.innerText
+            this.conteudoFrame = this.conteudoFrame === fS ? null : fS
         }
     },
     computed: {},
@@ -82,7 +137,13 @@ export default {
     overflow-y: scroll;
 }
 .caixona > button {
-    width: 100px;
-    height: 100px;
+    background-color: rgb(255, 245, 253);
+    border: 1px solid rgb(255, 230, 234);
+    padding: 20px;
+}
+.botaoEspecial {
+    background-color: #555555 !important;
+    border-color: gold !important;
+    color: white !important;
 }
 </style>

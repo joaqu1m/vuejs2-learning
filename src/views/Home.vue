@@ -3,7 +3,11 @@
         <button class="home_container" @click="redirecionar2()">
             Ir para cadastro
         </button>
-        router-view
+        <router-link to="/testes">
+            <button class="home_container">
+                Ir para testes
+            </button>
+        </router-link>
         <br>ComponenteTeste:
         <TesteProps v-bind="propsTesteProps" />
         <PropsEspecificadas :mensagem="propsTesteProps.mensagem" :outraProp="propsTesteProps.outraProp" />
