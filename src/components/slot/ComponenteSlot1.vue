@@ -1,14 +1,13 @@
 <template>
     <div>
-        <p style="color: red">
-            este é um componente global que foi importado no main.js
-        </p>
+        <h3>ComponenteSlot1</h3>
+        <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "ComponenteGlobal",
+    name: "ComponenteSlot1",
     props: [],
     components: {},
     data() {

@@ -16,100 +16,51 @@
 </template>
 
 <script>
-import TesteVuex from '../components/vuex/TesteVuex.vue';
-import HooksTest from '../components/lifeCycleHooks/HooksTest.vue';
-import TesteV_IF from '../components/condicionais/TesteV_IF.vue'
-import TesteFor from '../components/looping_ref/TesteFor.vue'
-import TesteForRef from '../components/looping_ref/TesteForRef.vue'
-import TesteRef from '../components/looping_ref/TesteRef.vue'
-import TesteForMatriz from '../components/looping_ref/TesteForMatriz.vue'
-import TesteForJson from '../components/looping_ref/TesteForJson.vue'
-import TesteForKey from '../components/looping_ref/TesteForKey.vue';
-import TesteReplaceFor from '../components/looping_ref/TesteReplaceFor.vue';
-import TesteComputed from '../components/option_obj/TesteComputed.vue';
-import TesteWatch from '../components/option_obj/TesteWatch.vue';
-import TesteStyles from '../components/estilizacoes/TesteStyles.vue';
-import Testevmodel from '../components/twowaydatabind/Testevmodel.vue';
-import TesteVModelModifiers from '../components/twowaydatabind/TesteVModelModifiers.vue';
-import TesteVOnGlobal from '../components/lifeCycleHooks/TesteVOnGlobal.vue';
-import TesteCalculos from '../components/lifeCycleHooks/TesteCalculos.vue';
-
 export default {
     name: "Testes",
     props: [],
     components: {
-        TesteVuex,
-        HooksTest,
-        TesteV_IF,
-        TesteFor,
-        TesteForRef,
-        TesteRef,
-        TesteForMatriz,
-        TesteForJson,
-        TesteForKey,
-        TesteReplaceFor,
-        TesteComputed,
-        TesteWatch,
-        TesteStyles,
-        Testevmodel,
-        TesteVModelModifiers,
-        TesteVOnGlobal,
-        TesteCalculos
+        TesteVuex: () => import("../components/vuex/TesteVuex.vue"),
+        HooksTest: () => import("../components/lifeCycleHooks/HooksTest.vue"),
+        TesteV_IF: () => import("../components/condicionais/TesteV_IF.vue"),
+        TesteFor: () => import("../components/looping_ref/TesteFor.vue"),
+        TesteForRef: () => import("../components/looping_ref/TesteForRef.vue"),
+        TesteRef: () => import("../components/looping_ref/TesteRef.vue"),
+        TesteForMatriz: () => import("../components/looping_ref/TesteForMatriz.vue"),
+        TesteForJson: () => import("../components/looping_ref/TesteForJson.vue"),
+        TesteForKey: () => import("../components/looping_ref/TesteForKey.vue"),
+        TesteReplaceFor: () => import("../components/looping_ref/TesteReplaceFor.vue"),
+        TesteComputed: () => import("../components/option_obj/TesteComputed.vue"),
+        TesteWatch: () => import("../components/option_obj/TesteWatch.vue"),
+        TesteStyles: () => import("../components/estilizacoes/TesteStyles.vue"),
+        Testevmodel: () => import("../components/twowaydatabind/Testevmodel.vue"),
+        TesteVModelModifiers: () => import("../components/twowaydatabind/TesteVModelModifiers.vue"),
+        TesteVOnGlobal: () => import("../components/lifeCycleHooks/TesteVOnGlobal.vue"),
+        TesteCalculos: () => import("../components/lifeCycleHooks/TesteCalculos.vue"),
+        TesteSlotMain: () => import("../components/slot/TesteSlotMain.vue")
     },
     data() {
         return {
-            frames: [{
-                inn: "TesteVuex",
-                especial: false
-            }, {
-                inn: "HooksTest",
-                especial: false
-            }, {
-                inn: "TesteV_IF",
-                especial: false
-            }, {
-                inn: "TesteFor",
-                especial: false
-            }, {
-                inn: "TesteForRef",
-                especial: false
-            }, {
-                inn: "TesteRef",
-                especial: false
-            }, {
-                inn: "TesteForMatriz",
-                especial: true
-            }, {
-                inn: "TesteForJson",
-                especial: false
-            }, {
-                inn: "TesteForKey",
-                especial: false
-            }, {
-                inn: "TesteReplaceFor",
-                especial: false
-            }, {
-                inn: "TesteComputed",
-                especial: true
-            }, {
-                inn: "TesteWatch",
-                especial: false
-            }, {
-                inn: "TesteStyles",
-                especial: false
-            }, {
-                inn: "Testevmodel",
-                especial: true
-            }, {
-                inn: "TesteVModelModifiers",
-                especial: false
-            }, {
-                inn: "TesteVOnGlobal",
-                especial: false
-            }, {
-                inn: "TesteCalculos",
-                especial: true
-            }],
+            frames: [
+                { inn: "TesteVuex", especial: false },
+                { inn: "HooksTest", especial: false },
+                { inn: "TesteV_IF", especial: false },
+                { inn: "TesteFor", especial: false },
+                { inn: "TesteForRef", especial: false },
+                { inn: "TesteRef", especial: false },
+                { inn: "TesteForMatriz", especial: true },
+                { inn: "TesteForJson", especial: false },
+                { inn: "TesteForKey", especial: false },
+                { inn: "TesteReplaceFor", especial: false },
+                { inn: "TesteComputed", especial: true },
+                { inn: "TesteWatch", especial: false },
+                { inn: "TesteStyles", especial: false },
+                { inn: "Testevmodel", especial: true },
+                { inn: "TesteVModelModifiers", especial: false },
+                { inn: "TesteVOnGlobal", especial: false },
+                { inn: "TesteCalculos", especial: true },
+                { inn: "TesteSlotMain", especial: false }
+            ],
             conteudoFrame: null
         }
     },

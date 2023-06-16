@@ -1,14 +1,13 @@
 <template>
     <div>
-        <p style="color: red">
-            este é um componente global que foi importado no main.js
-        </p>
+        <h3>ComponenteDinamico</h3>
+        <component :is="componente"></component>
     </div>
 </template>
 
 <script>
 export default {
-    name: "ComponenteGlobal",
+    name: "ComponenteDinamico",
     props: [],
     components: {},
     data() {
