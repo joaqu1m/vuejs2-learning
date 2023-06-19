@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from './views/Home.vue';
-import Cadastro from './views/Cadastro.vue';
+import Cadastro from './components/cadastro/Cadastro.vue';
 import Lojinha from './views/Lojinha.vue';
 import TesteMaps from './components/vuex-maps/TesteMaps.vue';
 import Testes from './views/Testes.vue';

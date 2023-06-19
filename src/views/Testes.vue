@@ -6,16 +6,25 @@
                 <button>Retornar à home</button>
             </router-link>
             <h2>Página de testes gerais</h2>
+            <p>Os componentes desta página são registrados de forma assíncrona, assim nem todos os componentes precisam carregar para que a página carregue</p>
         </div>
         <div class="caixona">
             <button v-for="(frame, i) in frames" :key="i" @click="mostrarFrame" :class="{ botaoEspecial: frame.especial }">
                 {{ frame.inn }}
             </button>
+            <button @click="modalAberto = true" class="botaoEspecial">
+                Modal
+            </button>
         </div>
+        <Modal v-if="modalAberto" :modalAberto.sync="modalAberto">
+            <h3>meu modal</h3>
+        </Modal>
     </div>
 </template>
 
 <script>
+import Modal from "../components/transition/Modal.vue"
+
 export default {
     name: "Testes",
     props: [],
@@ -37,10 +46,13 @@ export default {
         TesteVModelModifiers: () => import("../components/twowaydatabind/TesteVModelModifiers.vue"),
         TesteVOnGlobal: () => import("../components/lifeCycleHooks/TesteVOnGlobal.vue"),
         TesteCalculos: () => import("../components/lifeCycleHooks/TesteCalculos.vue"),
-        TesteSlotMain: () => import("../components/slot/TesteSlotMain.vue")
+        TesteSlotMain: () => import("../components/slot/TesteSlotMain.vue"),
+        TesteTransicao: () => import("../components/transition/TesteTransicao.vue"),
+        Modal
     },
     data() {
         return {
+            modalAberto: false,
             frames: [
                 { inn: "TesteVuex", especial: false },
                 { inn: "HooksTest", especial: false },
@@ -59,7 +71,8 @@ export default {
                 { inn: "TesteVModelModifiers", especial: false },
                 { inn: "TesteVOnGlobal", especial: false },
                 { inn: "TesteCalculos", especial: true },
-                { inn: "TesteSlotMain", especial: false }
+                { inn: "TesteSlotMain", especial: false },
+                { inn: "TesteTransicao", especial: false }
             ],
             conteudoFrame: null
         }
@@ -68,7 +81,8 @@ export default {
         mostrarFrame(e) {
             const fS = e.target.innerText
             this.conteudoFrame = this.conteudoFrame === fS ? null : fS
-        }
+        },
+        fecharModal() {}
     },
     computed: {},
     watch: {}
