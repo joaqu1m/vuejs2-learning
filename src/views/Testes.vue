@@ -48,6 +48,7 @@ export default {
         TesteCalculos: () => import("../components/lifeCycleHooks/TesteCalculos.vue"),
         TesteSlotMain: () => import("../components/slot/TesteSlotMain.vue"),
         TesteTransicao: () => import("../components/transition/TesteTransicao.vue"),
+        TesteTransitionGroup: () => import("../components/transition/TesteTransitionGroup.vue"),
         Modal
     },
     data() {
@@ -72,7 +73,8 @@ export default {
                 { inn: "TesteVOnGlobal", especial: false },
                 { inn: "TesteCalculos", especial: true },
                 { inn: "TesteSlotMain", especial: false },
-                { inn: "TesteTransicao", especial: false }
+                { inn: "TesteTransicao", especial: false },
+                { inn: "TesteTransitionGroup", especial: false }
             ],
             conteudoFrame: null
         }
@@ -81,8 +83,7 @@ export default {
         mostrarFrame(e) {
             const fS = e.target.innerText
             this.conteudoFrame = this.conteudoFrame === fS ? null : fS
-        },
-        fecharModal() {}
+        }
     },
     computed: {},
     watch: {}
