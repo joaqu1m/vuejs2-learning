@@ -8,6 +8,12 @@
                 Ir para testes
             </button>
         </router-link>
+        <router-link to="/contato">
+            <button class="home_container">
+                Ir para contato
+            </button>
+        </router-link>
+        <p>{{ nome }}</p>
         <br>ComponenteTeste:
         <TesteProps v-bind="propsTesteProps" />
         <ComponenteGlobal />
@@ -32,9 +38,9 @@
 </template>
 
 <script>
-import TesteProps from '../components/props/TesteProps.vue'
-import PropsEspecificadas from '../components/props/PropsEspecificadas.vue'
-import PropsTipadas from '../components/props/PropsTipadas.vue'
+import TesteProps from '../components/props/TesteProps.vue';
+import PropsEspecificadas from '../components/props/PropsEspecificadas.vue';
+import PropsTipadas from '../components/props/PropsTipadas.vue';
 import TwoWayDataflow1 from '../components/props/TwoWayDataflow1.vue';
 import TwoWayDataflow2 from '../components/props/TwoWayDataflow2.vue';
 import TesteEventBus1 from '../components/props/TesteEventBus1.vue';
@@ -68,7 +74,8 @@ export default {
         redirecionar2() {
             this.$router.push("./cadastro")
         }
-    }
+    },
+    props: ["nome"]
 };
 </script>
 

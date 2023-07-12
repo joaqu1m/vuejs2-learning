@@ -1,5 +1,7 @@
 <template>
-    <router-view></router-view>
+    <Transition mode="out-in">
+        <router-view></router-view>
+    </Transition>
 </template>
 
 <script>
@@ -28,5 +30,15 @@ body {
 
 * {
     font-family: "Trebuchet MS";
+}
+
+.v-enter,
+.v-leave-to {
+    opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: all 0.1s
 }
 </style>

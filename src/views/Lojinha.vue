@@ -1,5 +1,10 @@
 <template>
     <div class="corpo">
+        <p>
+            <router-link to="/"><button>
+                Voltar
+            </button></router-link>
+        </p>
         caiu na loja
         {{ bananinha1 }}
         {{ bananinha2 }}
@@ -33,6 +38,24 @@ export default {
     watch: {},
     mounted() {
         console.log(bananao())
+    },
+    beforeRouteEnter(to, from, next) {
+        console.log("beforeRouteEnter")
+        console.log(to)
+        console.log(from)
+        next(vm => {
+            console.log(vm.bananinha1)
+        })
+    },
+    beforeRouteUpdate(to, from, next) {
+        console.log("beforeRouteUpdate")
+        console.log(to)
+        console.log(from)
+        console.log(this.bananinha1)
+        next()
+    },
+    beforeRouteLeave(to, from, next) {
+        if (confirm("Deseja sair da pagina mesmo???")) next()
     }
 }
 </script>

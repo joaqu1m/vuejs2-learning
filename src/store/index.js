@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import usuario from "@/store/usuario.js"
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
+    modules: {
+      usuario
+    },
     state: {
         count: 0
     },
